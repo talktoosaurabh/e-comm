@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Registration and Login css */
+
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F0F0;
+}
+
+.register {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F0F0;
+}
+
+.sub_div {
+    width: 27%;
+}
+
+div h3 {
+    font-family: 'Lobster', cursive;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Header css */
+
+.nav-style {
+    background: #ff7230;
+    box-shadow: 0 5px 20px 0 rgb(138 155 165 / 50%);
+}
+
+.header-name {
+    font-family: 'Lobster', cursive;
+}
+
+.header-content {
+    font-family: 'Lobster Two', cursive;
+    font-size: large;
+}
+
+
+/* footer css */
+
+footer {
+    width: 100%;
+    background-color: #ff7230;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+
+/* product css */
+
+.slider-container {
+    height: 75vh;
+    width: 98vw;
+    display: inline-flex;
+    /* overflow: hidden;
+    scrollbar-width: none; */
+    transform: translateX(0);
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+    user-select: none;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    height: 35vh;
+    width: 35vw;
+    transition: transform 0.3s ease-in-out;
+    user-select: none!important;
+}
+
+.left-product {
+    float: left;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-product {
+    float: right;
+    width: 50vw;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+.grabbing .slide img {
+    transform: scale(0.9);
+    box-shadow: 5px 5px 40px -1px var(--shadow);
+}
