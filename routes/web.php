@@ -20,5 +20,11 @@ Route::post('/signin',[userController::class,'login']);
 
 Route::get('/products',[productController::class,'index']);
 
+Route::post('/add',[ProductController::class,'addToCart']);
+
+Route::get('/cartList',[ProductController::class,'cartList']);
+
+Route::get('/removeCart/{$id}',[ProductController::class,'removeCartItems']);
+
 
 

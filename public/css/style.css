@@ -59,35 +59,6 @@ footer {
     margin-bottom: 0px;
 }
 
-
-/* product css */
-
-.slider-container {
-    height: 75vh;
-    width: 98vw;
-    display: inline-flex;
-    /* overflow: hidden;
-    scrollbar-width: none; */
-    transform: translateX(0);
-    will-change: transform;
-    transition: transform 0.3s ease-out;
-    cursor: grab;
-    user-select: none;
-}
-
-.slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide img {
-    height: 35vh;
-    width: 35vw;
-    transition: transform 0.3s ease-in-out;
-    user-select: none!important;
-}
-
 .left-product {
     float: left;
     width: 50vw;
@@ -108,4 +79,112 @@ footer {
 .grabbing .slide img {
     transform: scale(0.9);
     box-shadow: 5px 5px 40px -1px var(--shadow);
+}
+
+
+/* slider */
+
+.swiper-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    margin: 20px auto;
+}
+
+.round {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.cart_icon {
+    display: none;
+}
+
+.big-round {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.custom {
+    display: none;
+}
+
+
+/* mobile css */
+
+@media screen and (max-width: 640px) {
+    #navSection {
+        display: none;
+    }
+    #footerSection {
+        display: none;
+    }
+    #left-product {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #right-product {
+        width: 100vw;
+        padding: 35px 15px 15px 15px;
+    }
+    .slide {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .slide img {
+        height: 45vh;
+        width: 55vw;
+        transition: transform 0.3s ease-in-out;
+        user-select: none!important;
+    }
+    .swiper-slide {
+        display: block;
+    }
+    .cart_icon {
+        display: block;
+    }
 }

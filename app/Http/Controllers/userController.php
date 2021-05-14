@@ -33,7 +33,7 @@ class userController extends Controller
             $user->contact=$req->contact;
             $user->password=Hash::make($req->pass);
             $user->save();
-            return redirect('/');
+            return redirect('/login');
         }
         else{
             return "Password and Confirm Password does not match";

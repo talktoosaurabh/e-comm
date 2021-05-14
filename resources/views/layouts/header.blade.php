@@ -2,10 +2,10 @@
     use App\Http\Controllers\ProductController;
     use Illuminate\Support\Facades\Session;
     $total=0;
-    // if(Session::has('userSession'))
-    // {
-    //     $total=ProductController::cartItem();
-    // }
+    if(Session::has('userSession'))
+    {
+        $total=ProductController::cartItem();
+    }
 
 ?>
 
@@ -21,7 +21,7 @@
           <a class="nav-link ml-4" href="#">Home </a>
         </li>
         <li class="nav-item ml-4 active">
-          <a class="nav-link" href="#">Cart<sup> ({{$total}})</sup></a>
+          <a class="nav-link" href="/cartList">Cart<sup> ({{$total}})</sup></a>
         </li>
 
         @if(Session::has('userSession'))

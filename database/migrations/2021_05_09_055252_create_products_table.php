@@ -15,6 +15,7 @@ class CreateProductsTable extends Migration
             $table->string('product_image');
             $table->string('Product_description');
             $table->string('Product_size');
+            $table->string('Product_price');
             $table->string('base_color');
             $table->string('swoosh_color');
             $table->string('lace_color');
