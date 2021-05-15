@@ -12,6 +12,7 @@ class CreateCartTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('product_id');
+            $table->integer('flag');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
