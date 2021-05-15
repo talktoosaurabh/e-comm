@@ -22,6 +22,7 @@ class productController extends Controller
             $cart = new cart;
             $cart->user_id=$req->session()->get('userSession')['id'];
             $cart->product_id=$req->product_id;
+            $cart->flag=0;
             $cart->save();
             return redirect('/products');
         }
@@ -43,17 +44,24 @@ class productController extends Controller
         $products=DB::table('cart')
         ->join('products','cart.product_id','=','products.id')
         ->where('cart.user_id',$userid)
-        ->select('products.*','cart.id as cart_id')
+        ->select('products.*','cart.id as cart_id','cart.flag as cart_flag')
         ->get();
         return view('cartList',['products'=>$products]);
     }
  
-    function removeCartItems($id)
+    function removeCartItems(Request $request)
     {
- 
-     echo "hello";
-     exit;
-        cart::destroy($id);
+        cart::destroy($request->cart_id);
+        return redirect('/cartList');
+    }
+
+    function cartLater(Request $request)
+    {
+        $cart = cart::find($request->product_id);
+        if($cart) {
+          $cart->flag = 1;
+          $cart->save();
+        }
         return redirect('/cartList');
     }
 }

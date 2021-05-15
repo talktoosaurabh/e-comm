@@ -152,6 +152,20 @@ footer {
 }
 
 
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+.table-image{
+    height:100px;
+    width:200px;
+}
+
+
 /* mobile css */
 
 @media screen and (max-width: 640px) {

@@ -24,7 +24,9 @@ Route::post('/add',[ProductController::class,'addToCart']);
 
 Route::get('/cartList',[ProductController::class,'cartList']);
 
-Route::get('/removeCart/{$id}',[ProductController::class,'removeCartItems']);
+Route::post('/cart-delete',[ProductController::class,'removeCartItems']);
+
+Route::post('/cart-later',[ProductController::class,'cartLater']);
 
 
 
